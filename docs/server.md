@@ -8,7 +8,9 @@ Then use `Git Bash` or some other software that supports `ssh` to connect the se
 ssh hadoop@192.168.1.115
 ```
 
-Then activate jupyter notebook
+## Using  Jupyter Notebook
+
+Activate jupyter notebook
 
 ```bash
 jupyter notebook --ip=192.168.1.115
@@ -23,9 +25,11 @@ Copy this url to your browser, and open it. Then the Jupyter Notebook will show 
 
 For more imformation, please visit [Jupyter Notebook Documentation](https://jupyter.readthedocs.io/en/latest/)
 
+## Using command line
+
 ```bash
 ssh hadoop@192.168.1.115
-jupyter notebook --ip=192.168.1.115
 cd ~/zyc/bullet3-master/examples/pybullet/gym
 python3 -m pybullet_envs.agents.train_ppo --config=pybullet_pendulum --logdir=pendulum
+python3 -m pybullet_envs.agents.train_ppo --config=pybullet_minitaur --logdir=minitaur
 ```

@@ -119,7 +119,17 @@ def main(_):
         tf.logging.info('Score {}.'.format(score))
 ```
 
-It's confusing that `FLAGS.config` and `config` is not the same thing. `config` is the package imported by `import config` , which is defined in `config.py`.
+It's confusing that `FLAGS.config` and `configs` is not the same thing. `configs` is the package imported by `import configs` , which is defined in `configs.py`.
+
+If we delete the `pybullet_pendulum()` function in `configs.py`, line 11 will raise an error.
+
+```python
+config = tools.AttrDict(getattr(configs, FLAGS.config)())
+```
+
+> AttributeError: module 'configs' has no attribute 'pybullet_pendulum'
+
+This shows that the `config` flag is the key to call the function in `configs.py`
 
 #### `train.py`
 
@@ -238,7 +248,7 @@ def pybullet_pendulum():
     return locals()
 ```
 
-
+Every example is build on the default configuration.
 
 # Algorithm
 

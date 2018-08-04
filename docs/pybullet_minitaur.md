@@ -250,6 +250,18 @@ def pybullet_pendulum():
 
 Every example is build on the default configuration.
 
+# pybullet
+
+[GitHub repository](https://github.com/bulletphysics/bullet3)
+
+[BulletQuickstart.pdf on GitHub](https://github.com/bulletphysics/bullet3/blob/master/docs/BulletQuickstart.pdf)
+
+[Bullet_User_Manual.pdf on GitHub](https://github.com/bulletphysics/bullet3/blob/master/docs/Bullet_User_Manual.pdf)
+
+[Offical Site](http://bulletphysics.org/)
+
+[cuPyBullet Quickstart Guide on Google docs](https://docs.google.com/document/d/10sXEhzFRSnvFcl3XxNGhnD4N2SedqwdAvK3dsihxVUA)
+
 # Algorithm
 
 ## PPO algorithm

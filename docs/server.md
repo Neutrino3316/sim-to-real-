@@ -14,7 +14,14 @@ Then activate jupyter notebook
 jupyter notebook --ip=192.168.1.115
 ```
 
-It will return a link like this`http://192.168.1.115:8888/?token=050557c6bbe264a1c61d0dd5398a7ada372c0a91b73bfe5e`, open this url in your browser. And open the notebook `http://192.168.1.115:[port]/notebooks/zyc/bullet3-master/examples/pybullet/gym/pybullet_envs/agents/train_test_v0.1.0.ipynb`. This will
+It will return a link like this
+> `http://192.168.1.115:8888/?token=050557c6bbe264a1c61d0dd5398a7ada372c0a91b73bfe5e`
+
+Copy this url to your browser, and open it. Then the Jupyter Notebook will show up. Go for the `train_test_v0.1.0.ipynb` to run the code.
+
+> `http://192.168.1.115:[port]/notebooks/zyc/bullet3-master/examples/pybullet/gym/pybullet_envs/agents/train_test_v0.1.0.ipynb`
+
+
 
 ```bash
 ssh hadoop@192.168.1.115

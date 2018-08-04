@@ -1,3 +1,3 @@
-[how to run the code in sever](pybullet_minitaur.md)
+[how to run the code in sever](server.md)
 
-[current code analysis](server.md)
+[current code analysis](pybullet_minitaur.md)

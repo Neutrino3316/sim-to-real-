@@ -21,7 +21,7 @@ Copy this url to your browser, and open it. Then the Jupyter Notebook will show 
 
 > `http://192.168.1.115:[port]/notebooks/zyc/bullet3-master/examples/pybullet/gym/pybullet_envs/agents/train_test_v0.1.0.ipynb`
 
-
+For more imformation, please visit [Jupyter Notebook Documentation](https://jupyter.readthedocs.io/en/latest/)
 
 ```bash
 ssh hadoop@192.168.1.115

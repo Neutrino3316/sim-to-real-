@@ -248,7 +248,63 @@ def pybullet_pendulum():
     return locals()
 ```
 
+A minitaur example
+
+```python
+def pybullet_minitaur():
+    """Configuration specific to minitaur_gym_env.MinitaurBulletEnv class."""
+    locals().update(default())
+    randomizer = (minitaur_env_randomizer.MinitaurEnvRandomizer())
+    env = functools.partial(
+            minitaur_gym_env.MinitaurBulletEnv,
+            accurate_motor_model_enabled=True,
+            motor_overheat_protection=True,
+            pd_control_enabled=True,
+            env_randomizer=randomizer,
+            render=False)
+    max_length = 1000
+    steps = 3e7  # 30M
+    # tf.logging.info('locals of pybullet_minitaur ===================================== {}.'.format(locals()))
+    return locals()
+```
+
 Every example is build on the default configuration.
+
+If we take a look of the `locals()` in `pybullet_minitaur()` , it's something like this.
+
+```python
+{
+    'optimizer': < class 'tensorflow.python.training.adam.AdamOptimizer' > ,
+    'policy_layers': (200, 100),
+    'randomizer': < pybullet_envs.bullet.minitaur_env_randomizer.MinitaurEnvRandomizer object at 0x7fce9ae307f0 > ,
+    'update_every': 30,
+    'env': functools.partial( < class 'pybullet_envs.bullet.minitaur_gym_env.MinitaurBulletEnv' > , motor_overheat_protection = True, accurate_motor_model_enabled = True, pd_control_enabled = True, render = False, env_randomizer = < pybullet_envs.bullet.minitaur_env_randomizer.MinitaurEnvRandomizer object at 0x7fce9ae307f0 > ),
+    'algorithm': < class 'ppo.algorithm.PPOAlgorithm' > ,
+    'network': < function feed_forward_gaussian at 0x7fce9bbcc268 > ,
+    'value_layers': (200, 100),
+    'init_logstd': -1,
+    'use_gpu': True,
+    'learning_rate': 0.0001,
+    'update_epochs_policy': 64,
+    'num_agents': 30,
+    'kl_target': 0.01,
+    'max_length': 1000,
+    'update_epochs_value': 64,
+    'kl_cutoff_coef': 1000,
+    'kl_cutoff_factor': 2,
+    'kl_init_penalty': 1,
+    'discount': 0.995,
+    'update_epochs': 25,
+    'init_mean_factor': 0.1,
+    'steps': 30000000.0,
+    'eval_episodes': 30,
+    'weight_summaries': {
+        'all': '.*',
+        'value': '.*/value/.*',
+        'policy': '.*/policy/.*'
+    }
+}
+```
 
 # pybullet
 

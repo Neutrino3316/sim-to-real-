@@ -306,16 +306,16 @@ If we take a look of the `locals()` in `pybullet_minitaur()` , it's something li
 }
 ```
 
-# `MinitaurBulletEnv`
+# MinitaurBulletEnv
 
-Some print out of the `MinitaurBulletEnv`
+The env is defined in [pybullet_envs/bullet/minitaur_gym_env.py](https://github.com/bulletphysics/bullet3/blob/master/examples/pybullet/gym/pybullet_envs/bullet/minitaur.py)
 
 ```python
 import pybullet_envs.bullet.minitaur_gym_env as minitaur_gym_env
 minitaur_gym_env.MinitaurBulletEnv
 ```
 
-The env is defined in `pybullet_envs/bullet/minitaur_gym_env.py`
+Some print out of the `MinitaurBulletEnv`
 
 ```
 Init signature: a(urdf_root='/home/hadoop/.local/lib/python3.5/site-packages/pybullet_data', action_repeat=1, distance_weight=1.0, energy_weight=0.005, shake_weight=0.0, drift_weight=0.0, distance_limit=inf, observation_noise_stdev=0.0, self_collision_enabled=True, motor_velocity_limit=inf, pd_control_enabled=False, leg_model_enabled=True, accurate_motor_model_enabled=True, motor_kp=1.0, motor_kd=0.02, torque_control_enabled=False, motor_overheat_protection=True, hard_reset=True, on_rack=False, render=False, kd_for_pd_controllers=0.3, env_randomizer=<pybullet_envs.bullet.minitaur_env_randomizer.MinitaurEnvRandomizer object at 0x7fce9bb666d8>)

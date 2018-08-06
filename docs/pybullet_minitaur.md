@@ -248,65 +248,6 @@ def pybullet_pendulum():
     return locals()
 ```
 
-Some print out of the `MinitaurBulletEnv`
-
-```python
-import pybullet_envs.bullet.minitaur_gym_env as minitaur_gym_env
-minitaur_gym_env.MinitaurBulletEnv
-```
-
-
-
-```
-Init signature: a(urdf_root='/home/hadoop/.local/lib/python3.5/site-packages/pybullet_data', action_repeat=1, distance_weight=1.0, energy_weight=0.005, shake_weight=0.0, drift_weight=0.0, distance_limit=inf, observation_noise_stdev=0.0, self_collision_enabled=True, motor_velocity_limit=inf, pd_control_enabled=False, leg_model_enabled=True, accurate_motor_model_enabled=True, motor_kp=1.0, motor_kd=0.02, torque_control_enabled=False, motor_overheat_protection=True, hard_reset=True, on_rack=False, render=False, kd_for_pd_controllers=0.3, env_randomizer=<pybullet_envs.bullet.minitaur_env_randomizer.MinitaurEnvRandomizer object at 0x7fce9bb666d8>)
-Docstring:     
-The gym environment for the minitaur.
-
-It simulates the locomotion of a minitaur, a quadruped robot. The state space
-include the angles, velocities and torques for all the motors and the action
-space is the desired motor angle for each motor. The reward function is based
-on how far the minitaur walks in 1000 steps and penalizes the energy
-expenditure.
-Init docstring:
-Initialize the minitaur gym environment.
-
-Args:
-  urdf_root: The path to the urdf data folder.
-  action_repeat: The number of simulation steps before actions are applied.
-  distance_weight: The weight of the distance term in the reward.
-  energy_weight: The weight of the energy term in the reward.
-  shake_weight: The weight of the vertical shakiness term in the reward.
-  drift_weight: The weight of the sideways drift term in the reward.
-  distance_limit: The maximum distance to terminate the episode.
-  observation_noise_stdev: The standard deviation of observation noise.
-  self_collision_enabled: Whether to enable self collision in the sim.
-  motor_velocity_limit: The velocity limit of each motor.
-  pd_control_enabled: Whether to use PD controller for each motor.
-  leg_model_enabled: Whether to use a leg motor to reparameterize the action
-    space.
-  accurate_motor_model_enabled: Whether to use the accurate DC motor model.
-  motor_kp: proportional gain for the accurate motor model.
-  motor_kd: derivative gain for the accurate motor model.
-  torque_control_enabled: Whether to use the torque control, if set to
-    False, pose control will be used.
-  motor_overheat_protection: Whether to shutdown the motor that has exerted
-    large torque (OVERHEAT_SHUTDOWN_TORQUE) for an extended amount of time
-    (OVERHEAT_SHUTDOWN_TIME). See ApplyAction() in minitaur.py for more
-    details.
-  hard_reset: Whether to wipe the simulation and load everything when reset
-    is called. If set to false, reset just place the minitaur back to start
-    position and set its pose to initial configuration.
-  on_rack: Whether to place the minitaur on rack. This is only used to debug
-    the walking gait. In this mode, the minitaur's base is hanged midair so
-    that its walking gait is clearer to visualize.
-  render: Whether to render the simulation.
-  kd_for_pd_controllers: kd value for the pd controllers of the motors
-  env_randomizer: An EnvRandomizer to randomize the physical properties
-    during reset().
-File:           ~/.local/lib/python3.5/site-packages/pybullet_envs/bullet/minitaur_gym_env.py
-Type:           type
-```
-
 A minitaur example
 
 ```python
@@ -363,6 +304,67 @@ If we take a look of the `locals()` in `pybullet_minitaur()` , it's something li
         'policy': '.*/policy/.*'
     }
 }
+```
+
+# `MinitaurBulletEnv`
+
+Some print out of the `MinitaurBulletEnv`
+
+```python
+import pybullet_envs.bullet.minitaur_gym_env as minitaur_gym_env
+minitaur_gym_env.MinitaurBulletEnv
+```
+
+The env is defined in `pybullet_envs/bullet/minitaur_gym_env.py`
+
+```
+Init signature: a(urdf_root='/home/hadoop/.local/lib/python3.5/site-packages/pybullet_data', action_repeat=1, distance_weight=1.0, energy_weight=0.005, shake_weight=0.0, drift_weight=0.0, distance_limit=inf, observation_noise_stdev=0.0, self_collision_enabled=True, motor_velocity_limit=inf, pd_control_enabled=False, leg_model_enabled=True, accurate_motor_model_enabled=True, motor_kp=1.0, motor_kd=0.02, torque_control_enabled=False, motor_overheat_protection=True, hard_reset=True, on_rack=False, render=False, kd_for_pd_controllers=0.3, env_randomizer=<pybullet_envs.bullet.minitaur_env_randomizer.MinitaurEnvRandomizer object at 0x7fce9bb666d8>)
+Docstring:     
+The gym environment for the minitaur.
+
+It simulates the locomotion of a minitaur, a quadruped robot. The state space
+include the angles, velocities and torques for all the motors and the action
+space is the desired motor angle for each motor. The reward function is based
+on how far the minitaur walks in 1000 steps and penalizes the energy
+expenditure.
+Init docstring:
+Initialize the minitaur gym environment.
+
+Args:
+  urdf_root: The path to the urdf data folder.
+  action_repeat: The number of simulation steps before actions are applied.
+  distance_weight: The weight of the distance term in the reward.
+  energy_weight: The weight of the energy term in the reward.
+  shake_weight: The weight of the vertical shakiness term in the reward.
+  drift_weight: The weight of the sideways drift term in the reward.
+  distance_limit: The maximum distance to terminate the episode.
+  observation_noise_stdev: The standard deviation of observation noise.
+  self_collision_enabled: Whether to enable self collision in the sim.
+  motor_velocity_limit: The velocity limit of each motor.
+  pd_control_enabled: Whether to use PD controller for each motor.
+  leg_model_enabled: Whether to use a leg motor to reparameterize the action
+    space.
+  accurate_motor_model_enabled: Whether to use the accurate DC motor model.
+  motor_kp: proportional gain for the accurate motor model.
+  motor_kd: derivative gain for the accurate motor model.
+  torque_control_enabled: Whether to use the torque control, if set to
+    False, pose control will be used.
+  motor_overheat_protection: Whether to shutdown the motor that has exerted
+    large torque (OVERHEAT_SHUTDOWN_TORQUE) for an extended amount of time
+    (OVERHEAT_SHUTDOWN_TIME). See ApplyAction() in minitaur.py for more
+    details.
+  hard_reset: Whether to wipe the simulation and load everything when reset
+    is called. If set to false, reset just place the minitaur back to start
+    position and set its pose to initial configuration.
+  on_rack: Whether to place the minitaur on rack. This is only used to debug
+    the walking gait. In this mode, the minitaur's base is hanged midair so
+    that its walking gait is clearer to visualize.
+  render: Whether to render the simulation.
+  kd_for_pd_controllers: kd value for the pd controllers of the motors
+  env_randomizer: An EnvRandomizer to randomize the physical properties
+    during reset().
+File:           ~/.local/lib/python3.5/site-packages/pybullet_envs/bullet/minitaur_gym_env.py
+Type:           type
 ```
 
 # pybullet

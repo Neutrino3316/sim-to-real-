@@ -1,3 +1,11 @@
+---
+title: "代码运行指南"
+permalink: /server/
+last_modified_at: 2018-08-07T10:34:04+08:00
+toc: true
+toc_sticky: true
+---
+
 # How to run the code in the sever
 
 Make sure that you're in the Lab's Intranet, and is able to `ping 192.168.1.115`

@@ -400,25 +400,25 @@ class Minitaur(object):
     self.num_motors = 8
     self.num_legs = int(self.num_motors / 2)
     self._pybullet_client = pybullet_client
-    self._urdf_root = urdf_root #urdf_root: The path to the urdf folder.
+    self._urdf_root = urdf_root  # urdf_root: The path to the urdf folder.
     self._self_collision_enabled = self_collision_enabled
     self._motor_velocity_limit = motor_velocity_limit
-    self._pd_control_enabled = pd_control_enabled #can't understand
+    self._pd_control_enabled = pd_control_enabled  # can't understand
     self._motor_direction = [-1, -1, -1, -1, 1, 1, 1, 1]
-    self._observed_motor_torques = np.zeros(self.num_motors) #torque is  a force that produces or tends to produce rotation or torsion, an automobile engine delivers torque to the drive shaft
+    self._observed_motor_torques = np.zeros(self.num_motors)  # torque is  a force that produces or tends to produce rotation or torsion, an automobile engine delivers torque to the drive shaft
     self._applied_motor_torques = np.zeros(self.num_motors)
     self._max_force = 3.5
     self._accurate_motor_model_enabled = accurate_motor_model_enabled
     self._torque_control_enabled = torque_control_enabled
     self._motor_overheat_protection = motor_overheat_protection
-    self._on_rack = on_rack #can't understand
+    self._on_rack = on_rack  # can't understand
     if self._accurate_motor_model_enabled:
       self._kp = motor_kp
       self._kd = motor_kd
       self._motor_model = motor.MotorModel(
           torque_control_enabled=self._torque_control_enabled,
-          kp=self._kp,
-          kd=self._kd)
+          kp=self._kp,  # motor_kp: proportional gain for the accurate motor model
+          kd=self._kd)  # motor_kd: derivative gain for the acurate motor model
     elif self._pd_control_enabled:
       self._kp = 8
       self._kd = kd_for_pd_controllers
@@ -936,8 +936,12 @@ For example, if we run locals() in a single cell in jupyter notebook, it may giv
  'quit': <IPython.core.autocall.ZMQExitAutocall at 0x7f70f51a1198>}
 ```
 
+## 3. urdf file
 
+### Q: What's urdf file?
 
+In [/examples/pybullet/gym/pybullet_envs/bullet/minitaur.py](https://github.com/bulletphysics/bullet3/blob/master/examples/pybullet/gym/pybullet_envs/bullet/minitaur.py) the definition of Minitaur class mentioned the urdf.
+> urdf_root: The path to the urdf folder.
 
 
 

@@ -22,10 +22,240 @@ Figuring out how pybullet minitaur works
 
 ### Origin method
 
-First, `cd` to `~/bullet3-master/examples/pybullet/gym/pybullet_envs/` this folder and then run the following command.
+First, `cd` to `~/zyc/bullet3-master/examples/pybullet/gym/pybullet_envs/` this folder and then run the following command.
 ```bash
 python3 -m pybullet_envs.agents.train_ppo --config=pybullet_pendulum --logdir=pendulum
 ```
+
+### Some outputs
+
+```
+hadoop@gpu3:~/zyc/bullet3-master/examples/pybullet/gym/pybullet_envs$ python3 -m pybullet_envs.agents.train_ppo --config=pybullet_pendulum --logdir=pendulum
+pybullet build time: Jul 12 2018 10:40:53
+current_dir=/home/hadoop/.local/lib/python3.5/site-packages/pybullet_envs/bullet
+INFO:tensorflow:Start a new run and write summaries and checkpoints to pendulum/20180816T103105-pybullet_pendulum.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARN: Environment '<class 'pybullet_envs.gym_pendulum_envs.InvertedPendulumBulletEnv'>' has deprecated methods '_step' and '_reset' rather than 'step' and 'reset'. Compatibility code invoked. Set _gym_disable_underscore_compat = True to disable this behavior.
+INFO:tensorflow:Not normalizing infinite observation range.
+WARNING:tensorflow:Variable /= will be deprecated. Use variable.assign_div if you want assignment to the variable value or 'x = x / y' if you want a new python Tensor object.
+INFO:tensorflow:Graph contains 42803 trainable variables.
+2018-08-16 10:31:10.114847: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-08-16 10:31:10.217949: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212] Found device 0 with properties:
+name: GeForce GTX TITAN X major: 5 minor: 2 memoryClockRate(GHz): 1.076
+pciBusID: 0000:41:00.0
+totalMemory: 11.92GiB freeMemory: 11.60GiB
+2018-08-16 10:31:10.217985: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2018-08-16 10:31:10.385639: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11228 MB memory) -> physical GPU (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:41:00.0, compute capability: 5.2)
+INFO:tensorflow:
+--------------------------------------------------
+Phase train (phase step 0, global step 0).
+return and value: [14.5767927][0.0285066701]
+normalized advantage: [-5.61396291e-07]
+value loss: [1260.94226]
+policy loss: [-0.270250082]
+current penalty: [1]
+kl change: [0.00071804109]
+decrease penalty [0]
+return and value: [30.424963][0.590325177]
+normalized advantage: [-1.53446194e-06]
+policy loss: [-0.300998092]
+value loss: [4036.73511]
+current penalty: [0.666666687]
+kl change: [0.00107282447]
+decrease penalty [0]
+return and value: [27.213398][1.08306026]
+normalized advantage: [-3.15666199e-07]
+value loss: [3869.00098]
+policy loss: [-0.280239671]
+current penalty: [0.444444478]
+kl change: [0.00253911247]
+decrease penalty [0]
+return and value: [33.0769][1.72173464]
+normalized advantage: [-2.39563e-06]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+value loss: [4645.58887]
+policy loss: [-0.307737887]
+current penalty: [0.296296328]
+kl change: [0.00337141287]
+decrease penalty [0]
+return and value: [56.4372749][2.3777442]
+normalized advantage: [4.66028837e-07]
+kl cutoff! [1]
+kl cutoff! [2]
+kl cutoff! [2]
+kl cutoff! [2]
+kl cutoff! [2]
+kl cutoff! [2]
+kl cutoff! [2]
+kl cutoff! [2]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [2]
+value loss: [10686.9717]
+policy loss: [-0.332822502]
+current penalty: [0.197530895]
+kl change: [0.00428798888]
+decrease penalty [0]
+INFO:tensorflow:Score 33.11538314819336.
+INFO:tensorflow:
+--------------------------------------------------
+Phase eval (phase step 0, global step 6000).
+INFO:tensorflow:Score 55.453609466552734.
+INFO:tensorflow:
+--------------------------------------------------
+Phase train (phase step 6000, global step 12000).
+return and value: [47.1139259][3.29912949]
+normalized advantage: [5.48362721e-07]
+kl cutoff! [1]
+kl cutoff! [1]
+policy loss: [-0.340067744]
+value loss: [7130.77148]
+current penalty: [0.131687269]
+kl change: [0.00478364155]
+decrease penalty [0]
+return and value: [109.980789][4.03648567]
+normalized advantage: [2.34285991e-07]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [3]
+kl cutoff! [3]
+kl cutoff! [2]
+kl cutoff! [2]
+kl cutoff! [1]
+value loss: [25955.6426]
+policy loss: [-0.37302655]
+current penalty: [0.0877915174]
+kl change: [0.00810990389]
+INFO:tensorflow:Score 59.21126937866211.
+INFO:tensorflow:
+--------------------------------------------------
+Phase eval (phase step 6000, global step 18000).
+INFO:tensorflow:Score 127.45161437988281.
+INFO:tensorflow:
+--------------------------------------------------
+Phase train (phase step 12000, global step 24000).
+return and value: [156.173492][5.18598413]
+normalized advantage: [-2.09109e-06]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [3]
+kl cutoff! [3]
+kl cutoff! [3]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+value loss: [41576.8203]
+policy loss: [-0.38914451]
+current penalty: [0.0877915174]
+kl change: [0.00671380851]
+decrease penalty [0]
+INFO:tensorflow:Score 114.66666412353516.
+INFO:tensorflow:
+--------------------------------------------------
+Phase eval (phase step 12000, global step 30000).
+INFO:tensorflow:Score 153.63333129882812.
+INFO:tensorflow:
+--------------------------------------------------
+Phase train (phase step 18000, global step 36000).
+return and value: [350.295502][6.14041424]
+normalized advantage: [-8.52584833e-07]
+kl cutoff! [1]
+kl cutoff! [2]
+kl cutoff! [2]
+kl cutoff! [2]
+kl cutoff! [2]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [1]
+kl cutoff! [2]
+policy loss: [-0.357521236]
+value loss: [126717.742]
+current penalty: [0.0585276783]
+kl change: [0.0113684637]
+INFO:tensorflow:Score 152.09677124023438.
+INFO:tensorflow:
+--------------------------------------------------
+Phase eval (phase step 18000, global step 42000).
+INFO:tensorflow:Score 200.0.
+INFO:tensorflow:
+--------------------------------------------------
+
+```
+
+
 
 ### Rewrite with jupyter notebook
 
@@ -943,6 +1173,7 @@ For example, if we run locals() in a single cell in jupyter notebook, it may giv
 In [/examples/pybullet/gym/pybullet_envs/bullet/minitaur.py](https://github.com/bulletphysics/bullet3/blob/master/examples/pybullet/gym/pybullet_envs/bullet/minitaur.py) the definition of Minitaur class mentioned the urdf.
 > urdf_root: The path to the urdf folder.
 
+### A: ROS
 
 
 

@@ -1175,9 +1175,9 @@ In [/examples/pybullet/gym/pybullet_envs/bullet/minitaur.py](https://github.com/
 
 ### A: ROS
 
+A [wiki](http://wiki.ros.org/urdf) on ROS may explain it.
 
-
-
+> This package contains a C++ parser for the Unified Robot Description Format (URDF), which is an XML format for representing a robot model. 
 
 
 

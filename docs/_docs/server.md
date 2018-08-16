@@ -385,3 +385,17 @@ If you train the minitaur model, you may get something like this
 > --------------------------------------------------
 > ```
 
+## using tensorboard
+
+Replace `tensorboard` with the following command
+
+```bash
+python3 /usr/local/lib/python3.5/dist-packages/tensorboard/main.py
+```
+
+An example
+
+```bash
+python3 /usr/local/lib/python3.5/dist-packages/tensorboard/main.py --logdir=pendulum --host=192.168.1.115
+```
+

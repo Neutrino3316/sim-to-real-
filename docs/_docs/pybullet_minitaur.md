@@ -255,13 +255,19 @@ INFO:tensorflow:
 
 ```
 
+Then run the tensorboard
+
+```bash
+python3 /usr/local/lib/python3.5/dist-packages/tensorboard/main.py --logdir=pendulum --host=192.168.1.115
+```
+
 
 
 ### Rewrite with jupyter notebook
 
 The [train_test_v0.1.0.ipynb](http://192.168.1.115:8888/notebooks/zyc/bullet3-master/examples/pybullet/gym/pybullet_envs/agents/train_test_v0.1.0.ipynb) is the first rewritten file. It's rewritten from [train_ppo.py](https://github.com/bulletphysics/bullet3/blob/master/examples/pybullet/gym/pybullet_envs/agents/train_ppo.py), which is the code that will be excuted if you use the command above. Mainly, it modifies the `sys.path` , so that it can import some custom packages.
 
-```python
+​```python
 import sys
 sys.path.append('/home/hadoop/zyc/bullet3-master/examples/pybullet/gym/pybullet_envs/agents')
 sys.path.append('/home/hadoop/zyc/bullet3-master/examples/pybullet/gym/pybullet_envs')
@@ -270,7 +276,7 @@ sys.path.append('/home/hadoop/zyc/bullet3-master/examples/pybullet/gym')
 
 Then change
 
-```python
+​```python
 from . import tools
 from . import configs
 from . import utility

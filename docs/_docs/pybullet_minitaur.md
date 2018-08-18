@@ -6,8 +6,6 @@ toc: true
 toc_sticky: true
 ---
 
-[TOC]
-
 Figuring out how pybullet minitaur works
 
 # Source
@@ -569,9 +567,9 @@ If we take a look of the `locals()` in `pybullet_minitaur()` , it's something li
 }
 ```
 
-# MinitaurBulletEnv
+# Minitaur
 
-## environment location
+## MinitaurBullet environment `minitaur_gym_env.py`
 
 The env is defined in [pybullet_envs/bullet/minitaur_gym_env.py](https://github.com/bulletphysics/bullet3/blob/master/examples/pybullet/gym/pybullet_envs/bullet/minitaur_gym_env.py)
 
@@ -582,7 +580,26 @@ import pybullet_envs.bullet.minitaur_gym_env as minitaur_gym_env
 minitaur_gym_env.MinitaurBulletEnv
 ```
 
-## figuring out how it works
+### global varibales
+
+```python
+NUM_SUBSTEPS = 5
+NUM_MOTORS = 8
+MOTOR_ANGLE_OBSERVATION_INDEX = 0
+MOTOR_VELOCITY_OBSERVATION_INDEX = MOTOR_ANGLE_OBSERVATION_INDEX + NUM_MOTORS  # 8
+MOTOR_TORQUE_OBSERVATION_INDEX = MOTOR_VELOCITY_OBSERVATION_INDEX + NUM_MOTORS  # 16
+BASE_ORIENTATION_OBSERVATION_INDEX = MOTOR_TORQUE_OBSERVATION_INDEX + NUM_MOTORS  # 24
+ACTION_EPS = 0.01
+OBSERVATION_EPS = 0.01
+RENDER_HEIGHT = 720
+RENDER_WIDTH = 960
+```
+
+TODO: what does the EPS means?
+
+
+
+## Minitaur robot `minitaur.py`
 
 The robot is defined in [pybullet_envs/bullet/minitaur.py](https://github.com/bulletphysics/bullet3/blob/master/examples/pybullet/gym/pybullet_envs/bullet/minitaur.py)
 

@@ -299,6 +299,16 @@ import utility
 3. `python3 /usr/local/lib/python3.5/dist-packages/tensorboard/main.py --logdir=minitaur --host=192.168.1.115`
 4. python -m pybullet_envs.agents.visualize_ppo --logdir=pendulum/xxxxx --outdir=pendulum_video
 
+```bash
+python3 -m pybullet_envs.agents.visualize_ppo --logdir=minitaur/20180816T174103-pybullet_minitaur --outdir=20180816T174103-pybullet_minitaur_video
+```
+
+```python
+python3 -m pybullet_envs.agents.visualize_ppo --logdir=minitaur2/20180817T002013-pybullet_minitaur --outdir=20180817T002013-pybullet_minitaur_video
+```
+
+
+
 ## Find out which part is important
 
 `train_ppo.py`, `configs.py` and `networks.py` are the key files to understand this program.
@@ -563,7 +573,7 @@ If we take a look of the `locals()` in `pybullet_minitaur()` , it's something li
 
 ## environment location
 
-The env is defined in [pybullet_envs/bullet/minitaur_gym_env.py](https://github.com/bulletphysics/bullet3/blob/master/examples/pybullet/gym/pybullet_envs/bullet/minitaur.py)
+The env is defined in [pybullet_envs/bullet/minitaur_gym_env.py](https://github.com/bulletphysics/bullet3/blob/master/examples/pybullet/gym/pybullet_envs/bullet/minitaur_gym_env.py)
 
 Here is an example of how to import it.
 
@@ -573,6 +583,8 @@ minitaur_gym_env.MinitaurBulletEnv
 ```
 
 ## figuring out how it works
+
+The robot is defined in [pybullet_envs/bullet/minitaur.py](https://github.com/bulletphysics/bullet3/blob/master/examples/pybullet/gym/pybullet_envs/bullet/minitaur.py)
 
 ### global variables
 

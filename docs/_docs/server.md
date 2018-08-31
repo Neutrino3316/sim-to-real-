@@ -21,7 +21,7 @@ ssh hadoop@222.200.177.32 -p50000
 Activate jupyter notebook
 
 ```bash
-jupyter notebook --ip=222.200.177.32
+jupyter notebook --ip=192.168.2.101
 ```
 
 It will return a link like this

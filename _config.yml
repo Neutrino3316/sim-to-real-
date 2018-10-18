@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "zh-CN"
-title                    : "Site Title"
+title                    : "sim-to-real-learning"
 title_separator          : "-"
 name                     : "Your Name"
 description              : "An amazing website."
@@ -100,9 +100,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "实验室指南"
+  name             : ""
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "非官方网站"
+  bio              : ""
   location         : # "Somewhere"
   email            :
   uri              : # http://222.200.170.55:8081/

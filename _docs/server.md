@@ -1,11 +1,19 @@
+---
+title: "代码运行指南"
+permalink: /server/
+last_modified_at: 2018-08-07T10:34:04+08:00
+toc: true
+toc_sticky: true
+---
+
 # How to run the code in the sever
 
-Make sure that you're in the Lab's Intranet, and is able to `ping 192.168.1.115`
+Make sure that you're able to `ping 222.200.177.32`
 
 Then use `Git Bash` or some other software that supports `ssh` to connect the sever. The commands are as follows
 
 ```bash
-ssh hadoop@192.168.1.115
+ssh hadoop@222.200.177.32 -p50000
 ```
 
 ## Using  Jupyter Notebook
@@ -13,7 +21,7 @@ ssh hadoop@192.168.1.115
 Activate jupyter notebook
 
 ```bash
-jupyter notebook --ip=192.168.1.115
+jupyter notebook --ip=192.168.2.101
 ```
 
 It will return a link like this
@@ -28,7 +36,7 @@ For more imformation, please visit [Jupyter Notebook Documentation](https://jupy
 ## Using command line
 
 ```bash
-ssh hadoop@192.168.1.115
+ssh hadoop@222.200.177.32 -p50000
 cd ~/zyc/bullet3-master/examples/pybullet/gym
 python3 -m pybullet_envs.agents.train_ppo --config=pybullet_pendulum --logdir=pendulum
 python3 -m pybullet_envs.agents.train_ppo --config=pybullet_minitaur --logdir=minitaur
@@ -376,4 +384,18 @@ If you train the minitaur model, you may get something like this
 > INFO:tensorflow:
 > --------------------------------------------------
 > ```
+
+## using tensorboard
+
+Replace `tensorboard` with the following command
+
+```bash
+python3 /usr/local/lib/python3.5/dist-packages/tensorboard/main.py
+```
+
+An example
+
+```bash
+python3 /usr/local/lib/python3.5/dist-packages/tensorboard/main.py --logdir=pendulum --host=192.168.1.115
+```
 
